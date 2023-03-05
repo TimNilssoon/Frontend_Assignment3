@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <main>
+    <h1>todos</h1>
+    <div class="content">
+      <div class="newTodo">
+        <form>
+          <label style="visibility: hidden" id="toggleAllBtn" onclick="toggleAllComplete()">🔽</label>
+          <input id="inputText" type="text" placeholder="What needs to be done?" required>
+        </form>
+      </div>
+      <div class="hide">
+        <ul></ul>
+        <div class="buttonBar">
+          <span id="itemsLeft">0 item(s) left</span>
+          <div class="filters">
+            <button class="selected" id="all" type="button" onclick="displayTodos()">All</button>
+            <button id="active" type="button" onclick="displayTodos('active')">Active</button>
+            <button id="completed" type="button" onclick="displayTodos('completed')">Completed</button>
+          </div>
+          <button id="clearCompleted" type="button" onclick="clearCompletedTodos()">Clear Completed</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Todo App</p>
+    <p>This is a footer</p>
+  </footer>
+</body>
+
+</html>
